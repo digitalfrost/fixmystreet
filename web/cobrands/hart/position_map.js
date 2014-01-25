@@ -1,3 +1,9 @@
+/**
+ * Position the map box correctly on window resize.
+ *
+ * Called from fixmystreet.js when the window 'resize' event is fired
+ * and the page is transitioning to a desktop version.
+ */
 function position_map_box() {
     var $html = $('html');
     var hart_right;
@@ -6,12 +12,15 @@ function position_map_box() {
     } else {
         hart_right = '0em';
     }
+
+    var map_box_width = "956px";
+    var map_box_height = "600px";
     // Do the same as CSS (in case resized from mobile).
-    $('#map_box').prependTo('.content').css({
+    $('#map_box').prependTo('.wrapper').css({
         zIndex: 1, position: 'absolute',
         top: '1em', left: '', right: hart_right, bottom: '',
-        width: '464px', height: '464px',
-        margin: 0
+        width: map_box_width, height: map_box_height,
+        margin: "0 1em"
     });
 }
 

@@ -36,6 +36,17 @@ sub example_places {
     return ( 'GU51 4JX', 'Primrose Dr' );
 }
 
+sub map_type {
+    'Hart';
+}
+
+# increase map zoom level so street names are visible
+sub default_map_zoom { return 3; }
+
+sub on_map_default_max_pin_age {
+    return '1 month';
+}
+
 sub send_questionnaires {
     return 0;
 }
