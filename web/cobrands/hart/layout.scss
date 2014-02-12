@@ -1,7 +1,7 @@
 @import "_colours";
 @import "../sass/layout";
 
-.hart-wrapper { background: #fff center 110px no-repeat; margin: 0 auto; width: 1024px;}
+.hart-wrapper { background: #fff center 110px no-repeat; margin: 0 auto; width: 100%;}
 .offline .hart-wrapper { padding-bottom: 20px; }
 
 // So that map appears underneath the header
@@ -20,10 +20,6 @@
 .full-width { width: 464px; }
 .shadow-wrap { width: 464px; }
 
-#map_box {
-    width: 956px;
-    height: 600px;
-}
 .content { 
     width: 432px; 
     color: #666;
@@ -124,11 +120,12 @@ body.frontpage {
 
 // As map can scroll and isn't at the top, give it an edge
 #map_box {
+    position: fixed;
     border: solid 1px #999;
-    top: 1em;
+    top: 0;
     right: 0;
     left: 0;
-    margin: 0 1em;
+    margin: 0;
 }
 
 // Perhaps fix map location (should be in central?)
