@@ -16,14 +16,6 @@ sub problems_clause {
     return { bodies_str => { like => '%2333%' } };
 }
 
-sub path_to_web_templates {
-    my $self = shift;
-    return [
-        FixMyStreet->path_to( 'templates/web', $self->moniker )->stringify,
-        FixMyStreet->path_to( 'templates/web/fixmystreet' )->stringify
-    ];
-}
-
 sub disambiguate_location {
     my $self    = shift;
     my $string  = shift;
@@ -44,25 +36,12 @@ sub example_places {
     return ( 'GU51 4JX', 'Primrose Dr' );
 }
 
-sub map_type {
-    'Hart';
-}
-
-sub on_map_default_max_pin_age {
-    return '1 month';
-}
-
 sub send_questionnaires {
     return 0;
 }
 
 sub ask_ever_reported {
     return 0;
-}
-
-sub process_extras {
-    my $self = shift;
-    $self->SUPER::process_extras( @_, [ 'first_name', 'last_name' ] );
 }
 
 sub contact_email {
@@ -72,10 +51,6 @@ sub contact_email {
 sub contact_name { 'Hart District Council (do not reply)'; }
 
 sub reports_per_page { return 20; }
-
-sub title_list {
-    return ["MR", "MISS", "MRS", "MS", "DR"];
-}
 
 1;
 

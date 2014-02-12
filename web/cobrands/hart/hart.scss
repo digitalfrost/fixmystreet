@@ -4,16 +4,11 @@
 
     */
 
-/* Parts of Bromley's main CSS needed for its header/footer and adjusted (see
- * bottom) to not be affected by main FixMyStreet CSS. Not very sustainable;
- * perhaps we should wrap all council CSS within a SCSS #council ID? Hmm.
- */
-
 @import "compass";
 @import "_colours";
 
 
-// Bits of Bromley's forms.css, adjusted
+// Taken from Bromley's form css
 input[type=text],
 input[type=password],
 input[type=email],
@@ -23,8 +18,19 @@ select { background: #fff; border: 1px solid #768b9a; border-color: #768b9a #d1d
 @include border-radius(0); }
 
 .green-btn, button.green-btn, input.green-btn {
-    background: #5b7189 url("https://www.bromley.gov.uk/site/styles/css_img/button.gif") repeat-x 0 -1px; border: 1px solid #8e9eb0; color: #fff; font-family: 'Gill Sans MT', 'Trebuchet MS', Calibri, sans-serif; font-weight: normal; margin: 0; min-height: 23px; outline: 1px solid #405062; padding: 4px 8px; text-transform: uppercase; }
-.green-btn:hover, button.green-btn:hover, input.green-btn:hover { background: #5b7189; border: 1px solid #8e9eb0; }
+    background: #5b7189; 
+    border: 1px solid #8e9eb0; 
+    color: #fff; 
+    font-family: 'Gill Sans MT', 'Trebuchet MS', Calibri, sans-serif; 
+    font-weight: normal; 
+    margin: 0; min-height: 23px; 
+    /* outline: 1px solid #405062; */
+    padding: 4px 8px; 
+    text-transform: uppercase; 
+}
+.green-btn:hover, button.green-btn:hover, input.green-btn:hover { 
+    background: #5b7189; border: 1px solid #8e9eb0; 
+}
 .form-txt-submit-box input[type=submit] {
     padding-top: 0; padding-bottom: 0; width: auto;
 }
@@ -132,7 +138,7 @@ body { color: #333; font-family: "Gill Sans MT", Arial, 'Helvetica Neue', Helvet
 //#search input { background: #ececec; border: 1px solid #768b9a; border-color: #768b9a #d1dee8 #d1dee8 #768b9a; line-height: 9px; padding: 6px 5px 4px; width: 184px; }
 //#search input.button { background: #fff; border: 1px solid #8596a8; color: #333; font-family: 'Gill Sans', 'Trebuchet MS', Calibri, sans-serif; font-size:133%; height: 27px; line-height: 27px; padding: 0; vertical-align: top; width: 70px; }
 
-// #footer renamed to #bromley-footer, fixed font size.
+// #footer renamed to #hart-footer, fixed font size.
 #hart-footer, .hart-footer-wrapper { background-color: #4F5757; }
 #hart-footer { clear: both; width:100%; padding:30px 15px 50px; margin-left:-15px; color:#fff; font-size:92%;}
 #hart-footer a:link, 
@@ -144,7 +150,7 @@ body { color: #333; font-family: "Gill Sans MT", Arial, 'Helvetica Neue', Helvet
 #hart-footer .footer-nav li 			{ border-right:1px solid #fff; float: left; line-height: 1; padding: 0 20px; }
 #hart-footer .footer-nav li:last-child 	{ border: none; }
 
-// Bromley IE specific CSS
+// IE specific CSS
 .ie6 {
     div { zoom: 1; }
     .hart-wrapper { padding: 0; }

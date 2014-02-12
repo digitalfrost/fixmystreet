@@ -15,6 +15,7 @@
 }
 
 // To prevent font size larger interfering with the fixed Bromley layout
+// NB: probably all unneeded if we move the Hart site to larger map layout
 .container { width: auto; }
 .full-width { width: 464px; }
 .shadow-wrap { width: 464px; }
